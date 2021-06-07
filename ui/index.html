@@ -6,75 +6,32 @@
 
     <body style="display: none;">
         <div class="container">
-            <div id="cameracontrol" style="width: 100%; height: 100%;">
-                <div id="camerapanel">
-                    <button class="cameraview active" id="viewhead" onclick="setView(event, 'head')">
-                        <img src="assets/icons/head.svg">
-                    </button>
-                    <button class="cameraview" id="viewbody" onclick="setView(event, 'body')">
-                        <img src="assets/icons/body.svg">
-                    </button>
-                    <button class="cameraview" id="viewlegs" onclick="setView(event, 'legs')">
-                        <img src="assets/icons/legs.svg">
-                    </button>
-                </div>
-            </div>
-            <div id="main">
-                <div id="tabs">
-                    <button class="tablinks" id="tab-identity" onclick="openTab(event, 'identity')">
-                        Identity
-                        <img src="assets/icons/identity.svg">
-                    </button>
-                    <button class="tablinks" id="tab-features" onclick="openTab(event, 'features')">
-                        Features
-                        <img src="assets/icons/features.svg">
-                    </button>
-                    <button class="tablinks" id="tab-style"    onclick="openTab(event,    'style')">
-                        Style
-                        <img src="assets/icons/style.svg">
-                    </button>
-                    <button class="tablinks" id="tab-apparel"  onclick="openTab(event,  'apparel')">
-                        Apparel
-                        <img src="assets/icons/apparel.svg">
-                    </button>
-                </div>
-                <div class="content">
-                    <div id="identity" class="tabcontent">
+            <div class="main" style="display: none;">
+                <div id="title">Wardrobe</div>
+                <div id="outfit-list">
+                    <!-- NOTE: These are placeholder (valid) values, contents of this element are always replaced -->
+                    <div class="slot empty" data-number="1">
+                        <span class="slot-text">Empty slot</span>
+                        <div class="controls">
+                            <button class="edit"></button>
+                            <button class="clear"></button>
+                        </div>
                     </div>
-                    <div id="features" class="tabcontent">
-                    </div>
-                    <div id="style" class="tabcontent">
-                    </div>
-                    <div id="apparel" class="tabcontent">
+                    <div class="slot empty" data-number="3">
+                        <span class="slot-text">Empty slot</span>
+                        <!-- <input class="slot-input" type="text"> -->
+                        <div class="controls">
+                            <button class="edit"></button>
+                            <button class="clear"></button>
+                        </div>
                     </div>
                 </div>
-                <div class="panelbottom">
-                    <button class="menuclose" id="accept">
-                        Accept
-                    </button>
-                    <button class="menuclose" id="cancel">
-                        Cancel
-                    </button>
+                <div id="info-panel">
+                    <span id="info-text">info text</span>
+                    <img id="info-icon" src="">
                 </div>
-            </div>
-            <div class="overlay">
-            </div>
-            <div class="popup">
-                <div class="content">
-                    <div class="title">
-                        Confirmation
-                    </div>
-                    <div class="message">
-                        Popup question text goes here.
-                    </div>
-                    <div class="panelbottom">
-                        <button id="yes">
-                            Yes
-                        </button>
-                        <button id="no">
-                            No
-                        </button>
-                    </div>
+                <div id="bottom-panel">
+                    <button id="exit">Exit</button>
                 </div>
             </div>
         </div>
