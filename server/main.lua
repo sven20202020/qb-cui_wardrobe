@@ -111,7 +111,7 @@ end)
 
 QBCore.Functions.CreateCallback('cui_wardrobe:getOutfitInSlot', function(source, cb, slot)
     local xPlayer = QBCore.Functions.GetPlayer(source)
-    exports.ghmattimysql:execute("SELECT name, clothes FROM `player_outfits` WHERE `citizenid` = '"..xPlayer.PlayerData.citizenid.."' AND `slot` = '"..slot.."'", function(result)
+    exports.ghmattimysql:execute("SELECT name, clothes FROM `player_outfits` WHERE `owner` = '"..xPlayer.PlayerData.citizenid.."' AND `slot` = '"..slot.."'", function(result)
         local outfit = {}
 
         if result[1] ~= nil then
